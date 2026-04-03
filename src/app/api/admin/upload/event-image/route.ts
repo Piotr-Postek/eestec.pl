@@ -4,6 +4,8 @@ import {
   saveEventImageFile,
 } from "@/lib/event-image-upload";
 
+export const runtime = "nodejs";
+
 export async function POST(request: Request) {
   const auth = await requireAdminApi();
   if (!auth.ok) return auth.response;

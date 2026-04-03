@@ -6,6 +6,8 @@ import {
   writeEventsToDisk,
 } from "@/lib/events-store";
 
+export const runtime = "nodejs";
+
 export async function GET() {
   const auth = await requireAdminApi();
   if (!auth.ok) return auth.response;

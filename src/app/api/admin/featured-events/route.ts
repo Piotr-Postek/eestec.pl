@@ -6,6 +6,8 @@ import {
   writeFeaturedEventsToDisk,
 } from "@/lib/featured-events-store";
 
+export const runtime = "nodejs";
+
 export async function GET() {
   const auth = await requireAdminApi();
   if (!auth.ok) return auth.response;

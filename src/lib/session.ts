@@ -8,10 +8,10 @@ let cached: SessionOptions | null = null;
 
 export function getSessionOptions(): SessionOptions {
   if (cached) return cached;
-  const password = process.env.SESSION_SECRET;
+  const password = process.env["SESSION_SECRET"];
   if (!password || password.length < 32) {
     throw new Error(
-      "Ustaw SESSION_SECRET w .env.local (min. 32 znaki). Zobacz .env.example."
+      "Brak SESSION_SECRET (min. 32 znaki). Lokalnie: .env.local; AWS Amplify: Environment variables dla tej gałęzi."
     );
   }
   cached = {

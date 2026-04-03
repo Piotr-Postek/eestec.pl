@@ -3,6 +3,8 @@ import { cookies } from "next/headers";
 import { getSessionOptions } from "@/lib/session";
 import type { AdminSession } from "@/lib/session";
 
+export const runtime = "nodejs";
+
 export async function POST() {
   const session = await getIronSession<AdminSession>(
     await cookies(),
