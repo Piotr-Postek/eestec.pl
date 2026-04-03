@@ -69,6 +69,10 @@ export type SiteContent = {
     titleEn?: string;
     items: FeaturedRibItem[];
   };
+  partners: {
+    eyebrow: string;
+    title: string;
+  };
   footer: {
     label: string;
     copyright: string;
@@ -177,6 +181,10 @@ export const siteContent: SiteContent = {
           "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80",
       },
     ],
+  },
+  partners: {
+    eyebrow: "Współpraca",
+    title: "Partnerzy",
   },
   footer: {
     label: "Znajdziesz nas tutaj",

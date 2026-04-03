@@ -4,6 +4,7 @@ import { AboutSection } from "@/components/AboutSection";
 import { EventsSlider } from "@/components/EventsSlider";
 import { MainEventsRibsSection } from "@/components/MainEventsRibsSection";
 import { HeroCarousel } from "@/components/HeroCarousel";
+import { PartnersSection } from "@/components/PartnersSection";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { LocaleProvider, useLocale } from "@/context/LocaleContext";
@@ -37,6 +38,7 @@ function HomeSections() {
           items={featuredEvents.items}
         />
       </main>
+      <PartnersSection />
       <SiteFooter
         label={footer.label}
         copyright={footer.copyright}

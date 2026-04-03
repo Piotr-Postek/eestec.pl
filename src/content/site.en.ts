@@ -78,6 +78,10 @@ export const siteContentEn: SiteContent = {
       },
     ],
   },
+  partners: {
+    eyebrow: "Collaboration",
+    title: "Partners",
+  },
   footer: {
     label: "Find us here",
     copyright: "© EESTEC AGH Kraków",

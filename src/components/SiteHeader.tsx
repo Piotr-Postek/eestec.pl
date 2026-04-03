@@ -11,6 +11,7 @@ const NAV = {
     about: "O nas",
     events: "Wydarzenia",
     featured: "Główne wydarzenia",
+    partners: "Partnerzy",
     contact: "Kontakt",
   },
   en: {
@@ -19,6 +20,7 @@ const NAV = {
     about: "About",
     events: "Events",
     featured: "Flagship events",
+    partners: "Partners",
     contact: "Contact",
   },
 } as const;
@@ -55,6 +57,9 @@ export function SiteHeader() {
             </Link>
             <Link href="#glowne-wydarzenia" className={linkClass}>
               {labels.featured}
+            </Link>
+            <Link href="#partnerzy" className={linkClass}>
+              {labels.partners}
             </Link>
             <Link href="#stopka" className={linkClass}>
               {labels.contact}

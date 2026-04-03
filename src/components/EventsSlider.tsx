@@ -3,6 +3,9 @@
 import type { EventSlide } from "@/content/site";
 import { useLocale } from "@/context/LocaleContext";
 import { useFadeCarousel } from "@/hooks/useFadeCarousel";
+import { useCallback, useRef } from "react";
+
+const SWIPE_MIN_PX = 48;
 
 const INTERVAL_MS = 8000;
 
@@ -38,6 +41,29 @@ export function EventsSlider({ eyebrow, title, items }: Props) {
     INTERVAL_MS
   );
 
+  const swipeStartX = useRef<number | null>(null);
+
+  const onSwipePointerDown = useCallback((e: React.PointerEvent) => {
+    if (e.pointerType === "mouse" && e.button !== 0) return;
+    swipeStartX.current = e.clientX;
+  }, []);
+
+  const onSwipePointerUp = useCallback(
+    (e: React.PointerEvent) => {
+      if (swipeStartX.current == null) return;
+      const dx = e.clientX - swipeStartX.current;
+      swipeStartX.current = null;
+      if (Math.abs(dx) < SWIPE_MIN_PX) return;
+      if (dx < 0) next();
+      else prev();
+    },
+    [next, prev]
+  );
+
+  const onSwipePointerCancel = useCallback(() => {
+    swipeStartX.current = null;
+  }, []);
+
   return (
     <section
       className="grid min-h-[100svh] min-h-[100vh] scroll-mt-14 grid-rows-[auto_minmax(0,1fr)_auto] gap-2 bg-[var(--bg)] px-3 py-3 pb-[max(0.5rem,env(safe-area-inset-bottom))] sm:gap-3 sm:px-4 sm:py-4"
@@ -68,9 +94,12 @@ export function EventsSlider({ eyebrow, title, items }: Props) {
               <article
                 key={ev.title + ev.dateIso}
                 aria-hidden={index !== i}
-                className={`absolute inset-0 grid content-end transition-opacity duration-[450ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${
+                onPointerDown={index === i ? onSwipePointerDown : undefined}
+                onPointerUp={index === i ? onSwipePointerUp : undefined}
+                onPointerCancel={index === i ? onSwipePointerCancel : undefined}
+                className={`absolute inset-0 grid touch-pan-y content-end transition-opacity duration-[450ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${
                   index === i
-                    ? "z-[1] opacity-100"
+                    ? "z-[1] cursor-grab opacity-100 active:cursor-grabbing"
                     : "pointer-events-none z-0 opacity-0"
                 }`}
               >
@@ -105,7 +134,7 @@ export function EventsSlider({ eyebrow, title, items }: Props) {
 
         <button
           type="button"
-          className="absolute left-[max(0.5rem,env(safe-area-inset-left))] top-1/2 z-[3] grid size-9 -translate-y-1/2 place-items-center rounded-full border border-white/25 bg-[rgba(8,12,22,0.5)] text-lg leading-none text-[var(--text)] backdrop-blur-md transition-[background,border-color] hover:bg-white/12 hover:border-white/40 sm:left-2 sm:size-10 sm:text-xl"
+          className="absolute left-[max(0.5rem,env(safe-area-inset-left))] top-1/2 z-20 grid size-9 -translate-y-1/2 place-items-center rounded-full border border-white/25 bg-[rgba(8,12,22,0.5)] text-lg leading-none text-[var(--text)] backdrop-blur-md transition-[background,border-color] hover:bg-white/12 hover:border-white/40 sm:left-2 sm:size-10 sm:text-xl"
           onClick={prev}
           aria-label={u.prev}
         >
@@ -113,7 +142,7 @@ export function EventsSlider({ eyebrow, title, items }: Props) {
         </button>
         <button
           type="button"
-          className="absolute right-[max(0.5rem,env(safe-area-inset-right))] top-1/2 z-[3] grid size-9 -translate-y-1/2 place-items-center rounded-full border border-white/25 bg-[rgba(8,12,22,0.5)] text-lg leading-none text-[var(--text)] backdrop-blur-md transition-[background,border-color] hover:bg-white/12 hover:border-white/40 sm:right-2 sm:size-10"
+          className="absolute right-[max(0.5rem,env(safe-area-inset-right))] top-1/2 z-20 grid size-9 -translate-y-1/2 place-items-center rounded-full border border-white/25 bg-[rgba(8,12,22,0.5)] text-lg leading-none text-[var(--text)] backdrop-blur-md transition-[background,border-color] hover:bg-white/12 hover:border-white/40 sm:right-2 sm:size-10"
           onClick={next}
           aria-label={u.next}
         >
@@ -122,7 +151,7 @@ export function EventsSlider({ eyebrow, title, items }: Props) {
       </div>
 
       <div
-        className="mx-auto w-full max-w-4xl shrink-0 px-1 pt-1"
+        className="relative z-10 mx-auto w-full max-w-4xl shrink-0 px-1 pt-1"
         aria-label={u.timelineAria}
         role="tablist"
       >

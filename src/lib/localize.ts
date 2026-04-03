@@ -73,6 +73,7 @@ export function buildEnglishSiteContent(pl: SiteContent): SiteContent {
         items: ribItems,
       };
     })(),
+    partners: siteContentEn.partners,
     footer: {
       ...siteContentEn.footer,
       social: pl.footer.social,

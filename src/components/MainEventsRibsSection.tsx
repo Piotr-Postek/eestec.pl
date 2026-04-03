@@ -11,9 +11,6 @@ const RIB_CLIP =
 const FADE_MS = 450;
 const FADE_EASE = "cubic-bezier(0.22,1,0.36,1)";
 
-/** Ujemny margines ≈ połowa szerokości jednego z 4 kafelków → górna krawędź w okolicy środka sąsiada. */
-const RIB_OVERLAP_MD = "md:-ml-[12.5%]";
-
 type Props = {
   eyebrow: string;
   title: string;
@@ -58,7 +55,7 @@ export function MainEventsRibsSection({ eyebrow, title, items }: Props) {
       </div>
 
       <div
-        className="mx-auto flex w-full max-w-[100rem] flex-col gap-0 px-0 md:flex-row md:overflow-visible"
+        className="mx-auto flex w-full max-w-[100rem] flex-col gap-3 px-2 sm:px-3 md:flex-row md:gap-0 md:px-4"
         style={{ perspective: "1400px" }}
         onMouseLeave={() => setOpenIndex(null)}
       >
@@ -78,9 +75,7 @@ export function MainEventsRibsSection({ eyebrow, title, items }: Props) {
                 zIndex: open ? 32 : i + 1,
                 transition: `flex ${FADE_MS}ms ${FADE_EASE}, opacity ${FADE_MS}ms ${FADE_EASE}, filter ${FADE_MS}ms ${FADE_EASE}`,
               }}
-              className={`group/rib relative min-h-[220px] flex-1 md:min-h-[min(72vh,640px)] ${flexClass} ${
-                i > 0 ? RIB_OVERLAP_MD : ""
-              }`}
+              className={`group/rib relative min-h-[220px] flex-1 md:min-h-[min(72vh,640px)] ${flexClass}`}
               onMouseEnter={() => setOpenIndex(i)}
               onClick={() => handleRibClick(i)}
               onKeyDown={(e) => {
