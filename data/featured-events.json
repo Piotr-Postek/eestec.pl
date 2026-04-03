@@ -1,0 +1,26 @@
+{
+  "eyebrow": "W centrum uwagi",
+  "title": "Nasze główne wydarzenia",
+  "items": [
+    {
+      "title": "Warsztaty hardware & embedded",
+      "description": "Od lutownicy po mikrokontrolery — krótkie, intensywne sesje, na których w jeden dzień przechodzimy od schematu do działającego prototypu. Bez slidów z teorii, za to z realnym sprzętem w rękach.",
+      "imageUrl": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1200&q=80"
+    },
+    {
+      "title": "Hackathony i projekty zespołowe",
+      "description": "24–48 godzin kodu, elektroniki i pomysłów. Łączymy ludzi z różnych kierunków w zespoły, które na koniec dnia prezentują działające demo przed jury i widownią.",
+      "imageUrl": "/uploads/events/f9e31e6e-f6e1-4816-825d-bfab483b073b.webp"
+    },
+    {
+      "title": "Kongresy LC i wyjazdy międzynarodowe",
+      "description": "EESTEC to sieć lokalnych komitetów w całej Europie. Regularnie wyjeżdżamy na kongresy, wymiany i warsztaty za granicą — poznajesz ludzi, kultury i firmy z całego kontynentu.",
+      "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1200&q=80"
+    },
+    {
+      "title": "Integracje i networking",
+      "description": "Spotkania z firmami, wieczory tematyczne i luźne integracje po semestrze. To moment, żeby poznać starszych kolegów, mentorów i partnerów, którzy realnie pomagają w rozwoju kariery.",
+      "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80"
+    }
+  ]
+}

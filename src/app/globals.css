@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+/* Zmienne używane w komponentach (Hero, O nas, Wydarzenia, stopka) */
+:root {
+  --bg: #0c0f14;
+  --text: #f4f6f9;
+  --muted: rgba(244, 246, 249, 0.78);
+  --accent: #5b8cff;
+}
+
+@theme inline {
+  --font-sans: var(--font-dm-sans), system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: clip;
+}
+
+body {
+  margin: 0;
+  min-height: 100svh;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
+}
