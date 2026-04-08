@@ -3,11 +3,9 @@
 import type { FeaturedRibItem } from "@/content/site";
 import { useCallback, useEffect, useRef, useState } from "react";
 
-/** Równoległobok: góra i dół poziome, lewy i prawy bok tą samą „pochyłość” (równoległe). */
 const RIB_CLIP =
   "polygon(12% 0%, 84% 0%, 89% 100%, 17% 100%)";
 
-/** Jak w `EventsSlider` — płynne pojawianie treści. */
 const FADE_MS = 450;
 const FADE_EASE = "cubic-bezier(0.22,1,0.36,1)";
 
@@ -19,7 +17,9 @@ type Props = {
 
 export function MainEventsRibsSection({ eyebrow, title, items }: Props) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [narrow, setNarrow] = useState(false);
   const coarsePointerRef = useRef(false);
+  const narrowRef = useRef(false);
 
   useEffect(() => {
     const mq = window.matchMedia("(hover: none), (pointer: coarse)");
@@ -31,7 +31,19 @@ export function MainEventsRibsSection({ eyebrow, title, items }: Props) {
     return () => mq.removeEventListener("change", set);
   }, []);
 
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 767px)");
+    const sync = () => {
+      narrowRef.current = mq.matches;
+      setNarrow(mq.matches);
+    };
+    sync();
+    mq.addEventListener("change", sync);
+    return () => mq.removeEventListener("change", sync);
+  }, []);
+
   const handleRibClick = useCallback((i: number) => {
+    if (narrowRef.current) return;
     if (!coarsePointerRef.current) return;
     setOpenIndex((p) => (p === i ? null : i));
   }, []);
@@ -55,8 +67,7 @@ export function MainEventsRibsSection({ eyebrow, title, items }: Props) {
       </div>
 
       <div
-        className="mx-auto flex w-full max-w-[100rem] flex-col gap-3 px-2 sm:px-3 md:flex-row md:gap-0 md:px-4"
-        style={{ perspective: "1400px" }}
+        className="mx-auto flex w-full max-w-[100rem] flex-col gap-5 px-3 sm:px-4 md:flex-row md:gap-0 md:px-4 md:[perspective:1400px]"
         onMouseLeave={() => setOpenIndex(null)}
       >
         {items.map((item, i) => {
@@ -75,7 +86,7 @@ export function MainEventsRibsSection({ eyebrow, title, items }: Props) {
                 zIndex: open ? 32 : i + 1,
                 transition: `flex ${FADE_MS}ms ${FADE_EASE}, opacity ${FADE_MS}ms ${FADE_EASE}, filter ${FADE_MS}ms ${FADE_EASE}`,
               }}
-              className={`group/rib relative min-h-[220px] flex-1 md:min-h-[min(72vh,640px)] ${flexClass}`}
+              className={`group/rib relative flex flex-col md:min-h-[min(72vh,640px)] ${flexClass} max-md:overflow-hidden max-md:rounded-2xl max-md:border max-md:border-white/[0.1] max-md:bg-[#080b11] max-md:shadow-[0_16px_40px_rgba(0,0,0,0.35)]`}
               onMouseEnter={() => setOpenIndex(i)}
               onClick={() => handleRibClick(i)}
               onKeyDown={(e) => {
@@ -86,12 +97,46 @@ export function MainEventsRibsSection({ eyebrow, title, items }: Props) {
               }}
               tabIndex={0}
               role="group"
-              aria-expanded={open}
+              aria-expanded={narrow ? undefined : open}
               aria-label={item.title}
-              aria-describedby={open ? `rib-desc-${i}` : undefined}
+              aria-describedby={
+                narrow
+                  ? `rib-desc-${i}`
+                  : open
+                    ? `rib-desc-${i}-desktop`
+                    : undefined
+              }
             >
+              {/* Mobile: karta z obrazem + treść zawsze widoczna */}
+              <div className="flex min-h-0 w-full flex-col md:hidden">
+                <div className="relative aspect-[5/3] w-full overflow-hidden">
+                  <div
+                    className="absolute inset-0 scale-105 bg-cover bg-center"
+                    style={{ backgroundImage: `url("${item.imageUrl}")` }}
+                  />
+                  <div
+                    className="absolute inset-0 bg-gradient-to-t from-[#080b11] via-transparent to-transparent"
+                    aria-hidden
+                  />
+                  <div className="absolute inset-x-0 bottom-0 px-4 pb-3">
+                    <h3 className="text-base font-bold leading-tight tracking-[-0.02em] text-[var(--text)] drop-shadow-md">
+                      {item.title}
+                    </h3>
+                  </div>
+                </div>
+                <div className="border-t border-white/[0.08] px-4 py-3.5">
+                  <p
+                    id={`rib-desc-${i}`}
+                    className="text-sm leading-relaxed text-[var(--muted)]"
+                  >
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+
+              {/* Desktop: żebra z clip-path i hover */}
               <div
-                className="relative mx-auto h-full min-h-[inherit] w-full max-w-md md:max-w-none"
+                className="relative hidden h-full min-h-[220px] w-full max-w-none md:block md:min-h-[inherit] md:max-w-none"
                 style={{
                   transform: "rotateX(2deg)",
                   transformStyle: "preserve-3d",
@@ -136,7 +181,7 @@ export function MainEventsRibsSection({ eyebrow, title, items }: Props) {
                     {item.title}
                   </h3>
                   <p
-                    id={`rib-desc-${i}`}
+                    id={`rib-desc-${i}-desktop`}
                     className="mt-2 text-sm leading-relaxed text-[var(--muted)] md:mt-3 md:text-[0.9375rem]"
                   >
                     {item.description}
@@ -149,7 +194,7 @@ export function MainEventsRibsSection({ eyebrow, title, items }: Props) {
       </div>
 
       <p className="mx-auto mt-4 max-w-6xl px-4 text-center text-[0.65rem] text-[rgba(244,246,249,0.35)] md:hidden">
-        Stuknij kafelek, aby zobaczyć opis.
+        Przewiń, aby zobaczyć kolejne wydarzenia.
       </p>
     </section>
   );

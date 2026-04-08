@@ -4,6 +4,7 @@ import { AboutSection } from "@/components/AboutSection";
 import { EventsSlider } from "@/components/EventsSlider";
 import { MainEventsRibsSection } from "@/components/MainEventsRibsSection";
 import { HeroCarousel } from "@/components/HeroCarousel";
+import { HomeScrollIndicators } from "@/components/HomeScrollIndicators";
 import { PartnersSection } from "@/components/PartnersSection";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -17,6 +18,7 @@ function HomeSections() {
   return (
     <>
       <SiteHeader />
+      <HomeScrollIndicators />
       <HeroCarousel
         eyebrow={hero.eyebrow}
         title={hero.title}
