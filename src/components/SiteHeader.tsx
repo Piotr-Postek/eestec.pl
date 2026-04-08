@@ -16,6 +16,7 @@ const NAV = {
     events: "Wydarzenia",
     featured: "Główne wydarzenia",
     partners: "Partnerzy",
+    board: "Zarząd",
     contact: "Kontakt",
   },
   en: {
@@ -28,6 +29,7 @@ const NAV = {
     events: "Events",
     featured: "Flagship events",
     partners: "Partners",
+    board: "Board",
     contact: "Contact",
   },
 } as const;
@@ -38,6 +40,7 @@ const NAV_HREFS = [
   { href: "#wydarzenia", labelKey: "events" as const },
   { href: "#glowne-wydarzenia", labelKey: "featured" as const },
   { href: "#partnerzy", labelKey: "partners" as const },
+  { href: "#zarzad", labelKey: "board" as const },
   { href: "#stopka", labelKey: "contact" as const },
 ];
 

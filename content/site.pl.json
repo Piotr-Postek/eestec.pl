@@ -97,6 +97,38 @@
     "eyebrow": "Współpraca",
     "title": "Partnerzy"
   },
+  "board": {
+    "eyebrow": "Organizacja",
+    "title": "Zarząd 2025/2026",
+    "intro": "Skład zarządu Local Committee EESTEC AGH Kraków — kadencja 2025/2026.",
+    "members": [
+      {
+        "name": "Piotr Postek",
+        "role": "Prezes",
+        "imageUrl": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "name": "Adrianna Solińska",
+        "role": "Skarbnik",
+        "imageUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "name": "Karolina Polkowska",
+        "role": "Wiceprezes ds. kontaktów z zagranicą i administracji",
+        "imageUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "name": "Michał Filipkowski",
+        "role": "Wiceprezes ds. kontaktów z podmiotami zewnętrznymi",
+        "imageUrl": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "name": "Miłosz Potoczny",
+        "role": "Wiceprezes ds. zasobów ludzkich",
+        "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80"
+      }
+    ]
+  },
   "footer": {
     "label": "Znajdziesz nas tutaj",
     "copyright": "© EESTEC AGH Kraków",

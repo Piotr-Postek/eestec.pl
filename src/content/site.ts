@@ -40,6 +40,25 @@ export type FeaturedRibItem = {
   descriptionEn?: string;
 };
 
+/** Członek zarządu — zdjęcie, imię i nazwisko, funkcja; opcjonalnie `link` / `email`. */
+export type BoardMember = {
+  name: string;
+  role: string;
+  imageUrl: string;
+  /** np. https://… */
+  link?: string;
+  /** adres e-mail → link mailto */
+  email?: string;
+};
+
+export type BoardSectionContent = {
+  eyebrow: string;
+  title: string;
+  /** Krótki akapit pod tytułem (opcjonalny). */
+  intro?: string;
+  members: BoardMember[];
+};
+
 export type SiteContent = {
   hero: {
     eyebrow: string;
@@ -68,6 +87,7 @@ export type SiteContent = {
     eyebrow: string;
     title: string;
   };
+  board: BoardSectionContent;
   footer: {
     label: string;
     copyright: string;
