@@ -1,10 +1,8 @@
 import { HomePageClient } from "@/components/HomePageClient";
-import { getSiteContent } from "@/lib/getSiteContent";
-import { buildEnglishSiteContent } from "@/lib/localize";
+import { getSiteContentEn, getSiteContentPl } from "@/lib/getSiteContent";
 
-export default async function Home() {
-  const pl = await getSiteContent();
-  const en = buildEnglishSiteContent(pl);
-
+export default function Home() {
+  const pl = getSiteContentPl();
+  const en = getSiteContentEn();
   return <HomePageClient pl={pl} en={en} />;
 }

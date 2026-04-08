@@ -1,6 +1,4 @@
-# AWS Amplify: zmienne z konsoli są dostępne przy buildzie, ale Next.js SSR domyślnie
-# ich nie widzi w Lambda. Trzeba je dopisać do .env.production przed `next build`.
-# https://docs.aws.amazon.com/amplify/latest/userguide/ssr-environment-variables.html
+# Treść strony: pliki JSON w `content/` — brak zmiennych środowiskowych do builda.
 version: 1
 frontend:
   phases:
@@ -9,7 +7,6 @@ frontend:
         - npm ci
     build:
       commands:
-        - env | grep -e '^SESSION_SECRET=' -e '^ADMIN_PASSWORD=' >> .env.production
         - npm run build
   artifacts:
     baseDirectory: .next

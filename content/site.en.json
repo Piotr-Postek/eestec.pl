@@ -1,0 +1,141 @@
+{
+  "hero": {
+    "eyebrow": "Welcome",
+    "title": "Your full-screen headline",
+    "description": "A short line under the headline — describe an event, project, or organisation. Text stays readable over the semi-transparent layer on top of the photos.",
+    "ctaLabel": "Learn more",
+    "ctaHref": "#o-nas",
+    "slides": [
+      {
+        "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1920&q=80"
+      },
+      {
+        "imageUrl": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1920&q=80"
+      },
+      {
+        "imageUrl": "https://images.unsplash.com/photo-1540575467063-27aef4e7bd51?auto=format&fit=crop&w=1920&q=80"
+      },
+      {
+        "imageUrl": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1920&q=80"
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "Who we are",
+    "title": "About us",
+    "lead": "We are a community of students in electrical engineering and related fields — we combine passion for technology with hands-on projects and international collaboration. Our goal is to grow skills and build lasting ties in the academic world.",
+    "imageUrl": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1600&q=80"
+  },
+  "events": {
+    "eyebrow": "Calendar",
+    "title": "Events",
+    "items": [
+      {
+        "title": "Embedded C workshop",
+        "dateIso": "2026-04-12",
+        "dateLabel": "12 April 2026",
+        "description": "Hands-on microcontroller programming — from GPIO to serial communication. For students of electrical and related programmes.",
+        "imageUrl": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1600&q=80"
+      },
+      {
+        "title": "Networking with Kraków LC",
+        "dateIso": "2026-05-03",
+        "dateLabel": "3 May 2026",
+        "description": "Networking with local tech companies, student project showcases, and conversations about internships.",
+        "imageUrl": "/uploads/events/6aebeda7-6f29-47dd-b034-182949317437.webp"
+      },
+      {
+        "title": "Soft Skills Weekend",
+        "dateIso": "2026-05-24",
+        "dateLabel": "24–25 May 2026",
+        "description": "A two-day workshop on presentations, teamwork, and interview prep — weekend format on the AGH campus.",
+        "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80"
+      },
+      {
+        "title": "COAG",
+        "dateIso": "2026-04-03",
+        "dateLabel": "12 May",
+        "description": "Workshops on artificial intelligence.",
+        "imageUrl": "/uploads/events/48c75516-1bce-4ef3-bb12-61fedbb2d7f3.jpg"
+      },
+      {
+        "title": "New event",
+        "dateIso": "2026-04-03",
+        "dateLabel": "12 November",
+        "description": "Short description (IMW).",
+        "imageUrl": "/uploads/events/31d0c0f6-4400-4326-95b7-6b323a899f22.webp"
+      }
+    ]
+  },
+  "featuredEvents": {
+    "eyebrow": "In the spotlight",
+    "title": "Our flagship events",
+    "items": [
+      {
+        "title": "Hardware & embedded workshops",
+        "description": "From soldering irons to microcontrollers — short, intense sessions where we go from a schematic to a working prototype in one day. Less theory on slides, more real hardware in your hands.",
+        "imageUrl": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "title": "Hackathons and team projects",
+        "description": "24–48 hours of code, electronics, and ideas. We mix people from different programmes into teams that present a working demo to judges and the audience at the end.",
+        "imageUrl": "/uploads/events/f9e31e6e-f6e1-4816-825d-bfab483b073b.webp"
+      },
+      {
+        "title": "LC congresses and international trips",
+        "description": "EESTEC is a network of local committees across Europe. We regularly travel to congresses, exchanges, and workshops abroad — people, cultures, and companies from all over the continent.",
+        "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "title": "Meetups and networking",
+        "description": "Company events, themed evenings, and relaxed get-togethers after the semester. A chance to meet seniors, mentors, and partners who genuinely help you grow your career.",
+        "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80"
+      }
+    ]
+  },
+  "partners": {
+    "eyebrow": "Collaboration",
+    "title": "Partners"
+  },
+  "board": {
+    "eyebrow": "Organisation",
+    "title": "Board 2025/2026",
+    "intro": "EESTEC AGH Kraków Local Committee — board term 2025/2026.",
+    "members": [
+      {
+        "name": "Piotr Postek",
+        "role": "Chairperson",
+        "imageUrl": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "name": "Adrianna Solińska",
+        "role": "Treasurer",
+        "imageUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "name": "Karolina Polkowska",
+        "role": "Vice-Chair for contacts with foreign countries and administration",
+        "imageUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "name": "Michał Filipkowski",
+        "role": "Vice-Chair for contacts with external entities",
+        "imageUrl": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "name": "Miłosz Potoczny",
+        "role": "Vice-Chair for human resources",
+        "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80"
+      }
+    ]
+  },
+  "footer": {
+    "label": "Find us here",
+    "copyright": "© EESTEC AGH Kraków",
+    "social": {
+      "instagram": "https://www.instagram.com/",
+      "facebook": "https://www.facebook.com/",
+      "linkedin": "https://www.linkedin.com/"
+    }
+  }
+}

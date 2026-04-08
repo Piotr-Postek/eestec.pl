@@ -1,18 +1,17 @@
+import fs from "fs";
+import path from "path";
 import type { SiteContent } from "@/content/site";
-import { siteContent } from "@/content/site";
-import { getMergedFeaturedEventsPayload } from "@/lib/featured-events-store";
-import { getMergedEventsPayload } from "@/lib/events-store";
 
-/**
- * Treść strony: domyślne wartości z `site.ts` + nadpisania z `data/events.json`
- * oraz `data/featured-events.json` (panel administracyjny).
- */
-export async function getSiteContent(): Promise<SiteContent> {
-  const events = getMergedEventsPayload();
-  const featuredEvents = getMergedFeaturedEventsPayload();
-  return {
-    ...siteContent,
-    events,
-    featuredEvents,
-  };
+function readSiteFile(name: "site.pl.json" | "site.en.json"): SiteContent {
+  const fp = path.join(process.cwd(), "content", name);
+  const raw = fs.readFileSync(fp, "utf8");
+  return JSON.parse(raw) as SiteContent;
+}
+
+export function getSiteContentPl(): SiteContent {
+  return readSiteFile("site.pl.json");
+}
+
+export function getSiteContentEn(): SiteContent {
+  return readSiteFile("site.en.json");
 }
