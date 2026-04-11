@@ -17,6 +17,7 @@ const NAV = {
     featured: "Główne wydarzenia",
     partners: "Partnerzy",
     board: "Zarząd",
+    europe: "Europa",
     contact: "Kontakt",
   },
   en: {
@@ -30,6 +31,7 @@ const NAV = {
     featured: "Flagship events",
     partners: "Partners",
     board: "Board",
+    europe: "Europe",
     contact: "Contact",
   },
 } as const;
@@ -41,6 +43,7 @@ const NAV_HREFS = [
   { href: "#glowne-wydarzenia", labelKey: "featured" as const },
   { href: "#partnerzy", labelKey: "partners" as const },
   { href: "#zarzad", labelKey: "board" as const },
+  { href: "#mapa-europy", labelKey: "europe" as const },
   { href: "#stopka", labelKey: "contact" as const },
 ];
 

@@ -4,6 +4,7 @@ import { AboutSection } from "@/components/AboutSection";
 import { EventsSlider } from "@/components/EventsSlider";
 import { MainEventsRibsSection } from "@/components/MainEventsRibsSection";
 import { BoardSection } from "@/components/BoardSection";
+import { EuropeBranchesSection } from "@/components/EuropeBranchesSection";
 import { HeroCarousel } from "@/components/HeroCarousel";
 import { HomeScrollIndicators } from "@/components/HomeScrollIndicators";
 import { PartnersSection } from "@/components/PartnersSection";
@@ -14,7 +15,8 @@ import type { SiteContent } from "@/content/site";
 
 function HomeSections() {
   const { content } = useLocale();
-  const { hero, about, events, featuredEvents, board, footer } = content;
+  const { hero, about, events, featuredEvents, board, branchesMap, footer } =
+    content;
 
   return (
     <>
@@ -43,6 +45,7 @@ function HomeSections() {
       </main>
       <PartnersSection />
       <BoardSection board={board} />
+      <EuropeBranchesSection data={branchesMap} />
       <SiteFooter
         label={footer.label}
         copyright={footer.copyright}

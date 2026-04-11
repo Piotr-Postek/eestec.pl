@@ -59,6 +59,26 @@ export type BoardSectionContent = {
   members: BoardMember[];
 };
 
+/** Wpis dla kraju na mapie — klucz = ISO 3166-1 alpha-2 (np. PL, DE). */
+export type BranchCountryRow = {
+  name: string;
+  branches: number;
+};
+
+/** Mapa Europy z liczbą oddziałów EESTEC (dane z JSON). */
+export type BranchesMapSection = {
+  eyebrow: string;
+  title: string;
+  intro?: string;
+  hint: string;
+  branchWordPlOne: string;
+  branchWordPlFew: string;
+  branchWordPlMany: string;
+  branchWordEnSingular: string;
+  branchWordEnPlural: string;
+  countries: Record<string, BranchCountryRow>;
+};
+
 export type SiteContent = {
   hero: {
     eyebrow: string;
@@ -88,6 +108,7 @@ export type SiteContent = {
     title: string;
   };
   board: BoardSectionContent;
+  branchesMap: BranchesMapSection;
   footer: {
     label: string;
     copyright: string;

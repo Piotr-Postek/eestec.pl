@@ -10,6 +10,7 @@ const SECTION_IDS = [
   "glowne-wydarzenia",
   "partnerzy",
   "zarzad",
+  "mapa-europy",
   "stopka",
 ] as const;
 
@@ -26,6 +27,7 @@ const UI = {
       "glowne-wydarzenia": "Główne wydarzenia",
       partnerzy: "Partnerzy",
       zarzad: "Zarząd",
+      "mapa-europy": "Europa",
       stopka: "Kontakt",
     } satisfies Record<SectionId, string>,
   },
@@ -39,6 +41,7 @@ const UI = {
       "glowne-wydarzenia": "Flagship events",
       partnerzy: "Partners",
       zarzad: "Board",
+      "mapa-europy": "Europe",
       stopka: "Contact",
     } satisfies Record<SectionId, string>,
   },
