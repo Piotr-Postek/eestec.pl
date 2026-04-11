@@ -16,8 +16,8 @@ export function AboutSection({ about, mapBranches, locale }: Props) {
       aria-labelledby="about-heading"
     >
       {/* Na bardzo szerokich ekranach treść nie rozjeżdża się na cały viewport — wyższa max-width + większy tekst/mapę niżej */}
-      <div className="mx-auto flex min-h-svh min-h-[100vh] w-full max-w-[min(100%,92rem)] flex-col xl:max-w-[min(100%,104rem)] 2xl:max-w-[min(100%,118rem)] md:grid md:grid-cols-2 md:items-stretch">
-        <div className="relative z-[2] flex w-full max-w-[38rem] flex-1 flex-col justify-center justify-self-start px-[clamp(1.5rem,4vw,3.5rem)] py-[clamp(2rem,5vw,4rem)] md:bg-[linear-gradient(90deg,var(--bg)_0%,var(--bg)_78%,rgba(12,15,20,0.55)_100%)] xl:max-w-[44rem] xl:px-10 2xl:max-w-[50rem] 2xl:px-14 2xl:py-16">
+      <div className="mx-auto flex min-h-svh min-h-[100vh] w-full max-w-[min(100%,92rem)] flex-col md:flex-row md:items-center md:gap-[clamp(1rem,3vw,2.5rem)] xl:max-w-[min(100%,104rem)] 2xl:max-w-[min(100%,118rem)]">
+        <div className="relative z-[2] flex w-full max-w-[38rem] flex-1 flex-col justify-center px-[clamp(1.5rem,4vw,3.5rem)] py-[clamp(2rem,5vw,4rem)] md:min-h-0 md:w-0 md:flex-1 md:bg-[linear-gradient(90deg,var(--bg)_0%,var(--bg)_72%,rgba(12,15,20,0.35)_93%,var(--bg)_100%)] xl:max-w-[44rem] xl:px-10 2xl:max-w-[50rem] 2xl:px-14 2xl:py-16">
           <p className="mb-[0.65rem] text-[0.8125rem] font-semibold uppercase tracking-[0.18em] text-[var(--accent)] xl:text-[0.875rem]">
             {about.eyebrow}
           </p>
@@ -32,7 +32,7 @@ export function AboutSection({ about, mapBranches, locale }: Props) {
           </p>
         </div>
 
-        <div className="relative min-h-56 flex-1 basis-[42%] md:min-h-full md:flex-none">
+        <div className="relative flex min-h-56 w-full flex-1 basis-[42%] flex-col items-center justify-center bg-[var(--bg)] md:min-h-0 md:w-0 md:flex-1 md:basis-0">
           <AboutEuropeMap mapBranches={mapBranches} locale={locale} />
           <div
             className="pointer-events-none absolute inset-y-0 left-0 z-[1] hidden w-[clamp(100px,32%,280px)] md:block md:bg-[linear-gradient(90deg,var(--bg)_0%,rgba(12,15,20,0.92)_22%,rgba(12,16,22,0.2)_70%,transparent_100%)] md:backdrop-blur-[22px] md:[-webkit-mask-image:linear-gradient(90deg,#000_0%,#000_42%,rgba(0,0,0,0.65)_78%,transparent_100%)] md:[mask-image:linear-gradient(90deg,#000_0%,#000_42%,rgba(0,0,0,0.65)_78%,transparent_100%)] xl:w-[min(32%,320px)]"

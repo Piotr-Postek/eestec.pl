@@ -101,12 +101,13 @@ export function AboutEuropeMap({ mapBranches, locale }: Props) {
       : strokeFor("PL");
 
   return (
-    <div className="absolute inset-0 flex items-center justify-center overflow-hidden bg-[#080b10]">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_72%_58%_at_50%_48%,rgba(229,42,48,0.1)_0%,transparent_55%)]" />
+    <div className="relative flex w-full max-w-full items-center justify-center overflow-x-clip overflow-y-visible bg-[var(--bg)] py-[clamp(1.25rem,4vh,3rem)] md:py-[clamp(1rem,3vh,2.5rem)]">
+      {/* Środek pośwaty w stronę mapy (prawa część kolumny) — mniej twarde „ucięcie” po lewej */}
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_110%_72%_at_58%_48%,rgba(229,42,48,0.085)_0%,transparent_62%)]" />
 
       <svg
         viewBox={ABOUT_MAP_VIEWBOX}
-        className="relative z-[1] h-auto w-full max-w-full cursor-default px-3 max-h-[min(78vh,540px)] sm:max-h-[min(80vh,580px)] xl:max-h-[min(82vh,680px)] xl:px-5 2xl:max-h-[min(84vh,780px)] 2xl:px-6"
+        className="relative z-[1] h-auto w-full max-w-full cursor-default px-3 max-h-[min(85vh,640px)] sm:max-h-[min(87vh,700px)] xl:max-h-[min(89vh,800px)] xl:px-5 2xl:max-h-[min(92vh,900px)] 2xl:px-6"
         preserveAspectRatio="xMidYMid meet"
         role="img"
         aria-label={
