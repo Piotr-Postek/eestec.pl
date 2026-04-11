@@ -9,7 +9,7 @@ const PARTNERS = [
     href: "https://www.assaabloy.com/",
   },
   {
-    src: "/partners/hid.svg",
+    src: "/partners/hid.png",
     alt: "HID",
     href: "https://www.hidglobal.com/",
   },
@@ -22,11 +22,6 @@ const PARTNERS = [
     src: "/partners/nokia.svg",
     alt: "Nokia",
     href: "https://www.nokia.com/",
-  },
-  {
-    src: "/partners/agh.svg",
-    alt: "AGH Kraków",
-    href: "https://www.agh.edu.pl/",
   },
 ] as const;
 

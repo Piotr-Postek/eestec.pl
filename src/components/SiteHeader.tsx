@@ -136,10 +136,15 @@ export function SiteHeader() {
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3">
           <Link
             href="#start"
-            className="text-[0.95rem] font-semibold tracking-tight text-[var(--text)] hover:text-[var(--accent)]"
+            className="flex shrink-0 items-center rounded-lg outline-none transition-opacity hover:opacity-90 focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[#080a0e]"
             onClick={closeMobile}
           >
-            EESTEC AGH
+            <img
+              src="/images/AGH_Krakow_white.svg"
+              alt="AGH Kraków — EESTEC AGH Kraków"
+              className="h-10 min-h-[40px] w-auto max-w-[min(220px,52vw)] object-contain object-left [aspect-ratio:500/353] sm:h-11 sm:max-w-[280px]"
+              decoding="async"
+            />
           </Link>
 
           <div className="flex items-center gap-2 sm:gap-3">

@@ -41,7 +41,7 @@ export function BoardSection({ board }: Props) {
 
             const body = (
               <>
-                <div className="relative aspect-[4/5] w-full overflow-hidden bg-white/[0.06]">
+                <div className="relative aspect-[4/5] w-full shrink-0 overflow-hidden bg-white/[0.06]">
                   <img
                     src={m.imageUrl}
                     alt={m.name}
@@ -50,13 +50,18 @@ export function BoardSection({ board }: Props) {
                     decoding="async"
                   />
                 </div>
-                <div className="flex flex-col gap-1 px-1.5 pb-4 pt-3 text-center sm:px-2">
-                  <p className="text-[0.8125rem] font-semibold leading-tight text-[var(--text)] sm:text-sm">
+                <div className="flex min-h-0 flex-1 flex-col gap-1 px-1.5 pb-4 pt-3 text-center sm:px-2">
+                  <p className="shrink-0 text-[0.8125rem] font-semibold leading-tight text-[var(--text)] sm:text-sm">
                     {m.name}
                   </p>
-                  <p className="text-[0.65rem] leading-snug text-[var(--muted)] sm:text-[0.7rem]">
+                  <p className="min-h-0 flex-1 text-[0.65rem] leading-snug text-[var(--muted)] sm:text-[0.7rem]">
                     {m.role}
                   </p>
+                  {m.email?.trim() ? (
+                    <p className="shrink-0 break-all text-[0.6rem] leading-snug text-[var(--accent)] sm:text-[0.65rem]">
+                      {m.email.trim()}
+                    </p>
+                  ) : null}
                 </div>
               </>
             );
@@ -64,12 +69,12 @@ export function BoardSection({ board }: Props) {
             return (
               <li
                 key={`${m.name}-${i}`}
-                className="group min-w-0 overflow-hidden rounded-xl border border-white/[0.09] bg-white/[0.03] shadow-[0_8px_32px_rgba(0,0,0,0.2)]"
+                className="group flex h-full min-w-0 flex-col overflow-hidden rounded-xl border border-white/[0.09] bg-white/[0.03] shadow-[0_8px_32px_rgba(0,0,0,0.2)]"
               >
                 {href ? (
                   <a
                     href={href}
-                    className="block text-left outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[#06080d]"
+                    className="flex h-full min-h-0 flex-1 flex-col text-left outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[#06080d]"
                     aria-label={`${m.name}, ${m.role} — link`}
                     {...(href.startsWith("http")
                       ? { target: "_blank", rel: "noopener noreferrer" }
@@ -78,7 +83,9 @@ export function BoardSection({ board }: Props) {
                     {body}
                   </a>
                 ) : (
-                  <article>{body}</article>
+                  <article className="flex h-full min-h-0 flex-1 flex-col">
+                    {body}
+                  </article>
                 )}
               </li>
             );

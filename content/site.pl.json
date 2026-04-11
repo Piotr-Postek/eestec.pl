@@ -1,8 +1,8 @@
 {
   "hero": {
     "eyebrow": "Witamy",
-    "title": "Twój nagłówek na pełnym ekranie",
-    "description": "Krótki opis pod nagłówkiem — możesz tu opisać wydarzenie, projekt lub organizację. Tekst jest czytelny dzięki półprzezroczystemu tłu nad zdjęciami.",
+    "title": "Power Your Future",
+    "description": "Tworzymy lokalne i międzynarodowe projekty, które dają uczniom możliwość rozwijania umiejętności przywódczych i technicznych oraz poznawania innych kultur.",
     "ctaLabel": "Dowiedz się więcej",
     "ctaHref": "#o-nas",
     "slides": [
@@ -23,7 +23,7 @@
   "about": {
     "eyebrow": "Kim jesteśmy",
     "title": "O nas",
-    "lead": "Jesteśmy społecznością studentów inżynierii elektrycznej i pokrewnych kierunków — łączymy pasję do technologii z praktyką, projektami i międzynarodową współpracą. Naszym celem jest rozwój kompetencji i budowanie trwałych relacji w środowisku akademickim.",
+    "lead": "EESTEC AGH Kraków to uczelniana organizacja studencka – apolityczna i non-profit – prężnie działająca od lat na Akademii Górniczo-Hutniczej w Krakowie. Jesteśmy lokalnym komitetem europejskiej organizacji studenckiej EESTEC – Electrical Engineering Students' European Association – zrzeszającej studentów kierunków technicznych. Jesteśmy obecni na Akademii Górniczo-Hutniczej od 1998 roku i choć wywodzimy się z Koła Naukowego Elektroników, od 2009 roku działamy niezależnie. Szczególnie bliskie relacje utrzymujemy ze studentami i władzami Wydziału Elektroniki i Telekomunikacji Informatyki oraz Wydziału Elektrotechniki, Automatyki, Informatyki i Inżynierii Biomedycznej. Organizujemy cykliczne wydarzenia, takie jak warsztaty umiejętności miękkich Soft Skills Academy czy 24-godzinny hackathon Hachnarök. Nasi członkowie biorą udział w zagranicznych warsztatach organizowanych przez inne europejskie komitety EESTEC, gdzie zdobywają wiedzę i nawiązują kontakty międzynarodowe.",
     "imageUrl": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1600&q=80"
   },
   "events": {
@@ -31,39 +31,32 @@
     "title": "Wydarzenia",
     "items": [
       {
-        "title": "Warsztaty Embedded C",
-        "dateIso": "2026-04-12",
-        "dateLabel": "12 kwietnia 2026",
-        "description": "Praktyczne zajęcia z programowania mikrokontrolerów — od GPIO po komunikację szeregową. Dla studentów kierunków elektrycznych i pokrewnych.",
-        "imageUrl": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1600&q=80"
+        "title": "Hacknarok X",
+        "dateIso": "2026-04-18",
+        "dateLabel": "18-19 kwietnia 2026",
+        "description": "Chwyć klawiaturę w dłoń i wyrusz w 24-godzinną podróż po światach mitologii nordyckiej. Tu walka odbywa się z wykorzystaniem siły linijek kodu, które napiszesz razem z Twoim zespołem.",
+        "imageUrl": "/images/hacknarok.webp"
       },
       {
-        "title": "Integracja z LC Kraków",
-        "dateIso": "2026-05-03",
-        "dateLabel": "3 maja 2026",
-        "description": "Spotkanie networkingowe z lokalnymi firmami technologicznymi, prezentacje projektów studenckich i możliwość rozmów o praktykach.",
-        "imageUrl": "/uploads/events/6aebeda7-6f29-47dd-b034-182949317437.webp"
+        "title": "3. Zebranie Walne",
+        "dateIso": "2026-04-25",
+        "dateLabel": "25 kwietnia 2026",
+        "description": "Zbliża się trzecie Zebranie Walne — to walne wyborowe, więc Wasza obecność i głos mają bezpośredni wpływ na przyszłość LC w nadchodzącym roku. Wybrane osoby będą reprezentować nas lokalnie na AGH oraz w międzynarodowej sieci EESTEC.",
+        "imageUrl": "/images/walne-wyborowe.webp"
       },
       {
-        "title": "Soft Skills Weekend",
-        "dateIso": "2026-05-24",
-        "dateLabel": "24–25 maja 2026",
-        "description": "Dwudniowy warsztat z prezentacji, pracy w zespole i przygotowania do rozmów rekrutacyjnych — w formule weekendowej na terenie AGH.",
-        "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80"
+        "title": "Creation of AI Generation",
+        "dateIso": "2026-05-29",
+        "dateLabel": "29-31 maja 2026",
+        "description": "Osiem warsztatów AI (m.in. ML, dane, zastosowania w finansach) oraz wykłady o umiejętnościach miękkich — premierowa edycja na AGH. Nacisk na praktyczne wdrożenia w biznesie, nie tylko promptowanie; networking z ASSA ABLOY, Hitachi i Nokia oraz szanse na staże. Stacjonarnie, ok. 50 uczestników.",
+        "imageUrl": "/images/coag.webp"
       },
       {
-        "title": "COAG",
-        "dateIso": "2026-04-03",
-        "dateLabel": "12 maja",
-        "description": "warsztaty o tematyce AI",
-        "imageUrl": "/uploads/events/48c75516-1bce-4ef3-bb12-61fedbb2d7f3.jpg"
-      },
-      {
-        "title": "Nowe wydarzenie",
-        "dateIso": "2026-04-03",
-        "dateLabel": "12 listopada",
-        "description": "IMW",
-        "imageUrl": "/uploads/events/31d0c0f6-4400-4326-95b7-6b323a899f22.webp"
+        "title": "Motiwation Weekend",
+        "dateIso": "2026-05-22",
+        "dateLabel": "22-24 maja 2026",
+        "description": "Integracyjny wyjazd dla członków i Alumnych, z treningami, warsztatami i wspólną zabawą – idealny dla nowych członków na poznanie organizacji.",
+        "imageUrl": "/images/motivation.webp"
       }
     ]
   },
@@ -72,23 +65,18 @@
     "title": "Nasze główne wydarzenia",
     "items": [
       {
-        "title": "Warsztaty hardware & embedded",
-        "description": "Od lutownicy po mikrokontrolery — krótkie, intensywne sesje, na których w jeden dzień przechodzimy od schematu do działającego prototypu. Bez slidów z teorii, za to z realnym sprzętem w rękach.",
-        "imageUrl": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1200&q=80"
+        "title": "Hacknarok",
+        "description": "24-godzinny hackathon w klimacie mitologii nordyckiej — zespół, kod i demo przed jury. Flagowe wydarzenie techniczne LC, które łączy studentów różnych kierunków przy jednym stole (i jednej linijce commitów).",
+        "imageUrl": "/images/hack-main.webp"
       },
       {
-        "title": "Hackathony i projekty zespołowe",
-        "description": "24–48 godzin kodu, elektroniki i pomysłów. Łączymy ludzi z różnych kierunków w zespoły, które na koniec dnia prezentują działające demo przed jury i widownią.",
-        "imageUrl": "/uploads/events/f9e31e6e-f6e1-4816-825d-bfab483b073b.webp"
+        "title": "Warsztaty lokalne COAG",
+        "description": "Lokalna edycja cyklu o sztucznej inteligencji na AGH: praktyczne warsztaty z ML, danych i zastosowań AI w biznesie, spotkania z partnerami oraz rozwój kompetencji wykraczających poza samo promptowanie.",
+        "imageUrl": "/images/coag-main.webp"
       },
       {
-        "title": "Kongresy LC i wyjazdy międzynarodowe",
-        "description": "EESTEC to sieć lokalnych komitetów w całej Europie. Regularnie wyjeżdżamy na kongresy, wymiany i warsztaty za granicą — poznajesz ludzi, kultury i firmy z całego kontynentu.",
-        "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1200&q=80"
-      },
-      {
-        "title": "Integracje i networking",
-        "description": "Spotkania z firmami, wieczory tematyczne i luźne integracje po semestrze. To moment, żeby poznać starszych kolegów, mentorów i partnerów, którzy realnie pomagają w rozwoju kariery.",
+        "title": "SSA",
+        "description": "Soft Skills Academy — cykl warsztatów o prezentacji, komunikacji, pracy w zespole i odnajdywaniu się w środowisku zawodowym. Od teorii po ćwiczenia, które realnie przydają się na studiach i w rekrutacji.",
         "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80"
       }
     ]
@@ -105,27 +93,32 @@
       {
         "name": "Piotr Postek",
         "role": "Prezes",
-        "imageUrl": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80"
+        "email": "piotr.postek@eestec.pl",
+        "imageUrl": "/images/piotr_postek.webp"
       },
       {
         "name": "Adrianna Solińska",
         "role": "Skarbnik",
-        "imageUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80"
+        "email": "adrianna.solinska@eestec.pl",
+        "imageUrl": "/images/adrianna_solinska.webp"
       },
       {
         "name": "Karolina Polkowska",
         "role": "Wiceprezes ds. kontaktów z zagranicą i administracji",
-        "imageUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80"
+        "email": "karolina.polkowska@eestec.pl",
+        "imageUrl": "/images/karolina_polkowska.webp"
       },
       {
         "name": "Michał Filipkowski",
         "role": "Wiceprezes ds. kontaktów z podmiotami zewnętrznymi",
-        "imageUrl": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=600&q=80"
+        "email": "michal.filipkowski@eestec.pl",
+        "imageUrl": "/images/michal_filipkowski.webp"
       },
       {
         "name": "Miłosz Potoczny",
         "role": "Wiceprezes ds. zasobów ludzkich",
-        "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80"
+        "email": "milosz.potoczny@eestec.pl",
+        "imageUrl": "/images/milosz_potoczny.webp"
       }
     ]
   },
@@ -133,9 +126,9 @@
     "label": "Znajdziesz nas tutaj",
     "copyright": "© EESTEC AGH Kraków",
     "social": {
-      "instagram": "https://www.instagram.com/",
-      "facebook": "https://www.facebook.com/",
-      "linkedin": "https://www.linkedin.com/"
+      "instagram": "https://www.instagram.com/eestec_lc_krakow",
+      "facebook": "https://www.facebook.com/EESTEC.AGH.Krakow",
+      "linkedin": "https://www.linkedin.com/company/eestec-agh-krak%C3%B3w"
     }
   }
 }

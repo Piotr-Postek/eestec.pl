@@ -207,7 +207,7 @@ export function HomeScrollIndicators() {
                     <span
                       className={`rounded-full border-2 transition-all duration-300 ${
                         active
-                          ? "h-3 w-3 scale-100 border-[var(--accent)] bg-[var(--accent)] shadow-[0_0_12px_rgba(91,140,255,0.55)] md:h-3.5 md:w-3.5"
+                          ? "h-3 w-3 scale-100 border-[var(--accent)] bg-[var(--accent)] shadow-[0_0_12px_var(--accent-glow)] md:h-3.5 md:w-3.5"
                           : "h-2 w-2 scale-100 border-white/35 bg-[#0c0f14] group-hover:border-white/55 group-hover:bg-white/10 md:h-2.5 md:w-2.5"
                       }`}
                     />

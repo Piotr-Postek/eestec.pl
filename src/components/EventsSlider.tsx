@@ -197,7 +197,7 @@ export function EventsSlider({ eyebrow, title, items }: Props) {
                     <span
                       className={`rounded-full transition-[width,height,background-color,box-shadow] ${
                         active
-                          ? "size-3 bg-[var(--accent)] shadow-[0_0_0_3px_rgba(91,140,255,0.25)] sm:size-[13px]"
+                          ? "size-3 bg-[var(--accent)] shadow-[0_0_0_3px_var(--accent-ring)] sm:size-[13px]"
                           : "size-1.5 bg-white/35 group-hover:bg-white/55 sm:size-2"
                       }`}
                     />
