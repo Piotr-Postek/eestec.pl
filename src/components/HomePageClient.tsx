@@ -10,10 +10,15 @@ import { PartnersSection } from "@/components/PartnersSection";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { LocaleProvider, useLocale } from "@/context/LocaleContext";
+import type { MapBranchCountry } from "@/content/mapBranches";
 import type { SiteContent } from "@/content/site";
 
-function HomeSections() {
-  const { content } = useLocale();
+function HomeSections({
+  mapBranches,
+}: {
+  mapBranches: Record<string, MapBranchCountry>;
+}) {
+  const { content, locale } = useLocale();
   const { hero, about, events, featuredEvents, board, footer } = content;
 
   return (
@@ -29,7 +34,11 @@ function HomeSections() {
         slides={hero.slides}
       />
       <main>
-        <AboutSection about={about} />
+        <AboutSection
+          about={about}
+          mapBranches={mapBranches}
+          locale={locale}
+        />
         <EventsSlider
           eyebrow={events.eyebrow}
           title={events.title}
@@ -55,12 +64,13 @@ function HomeSections() {
 type Props = {
   pl: SiteContent;
   en: SiteContent;
+  mapBranches: Record<string, MapBranchCountry>;
 };
 
-export function HomePageClient({ pl, en }: Props) {
+export function HomePageClient({ pl, en, mapBranches }: Props) {
   return (
     <LocaleProvider pl={pl} en={en}>
-      <HomeSections />
+      <HomeSections mapBranches={mapBranches} />
     </LocaleProvider>
   );
 }

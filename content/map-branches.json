@@ -1,0 +1,14 @@
+{
+  "_note": "Liczby oddziałów LC wg kraju (dane do mapy w sekcji O nas). Plik geolocation.txt zawiera wyłącznie geometrię SVG z react-simple-maps — bez etykiet państw, więc nie da się z niego odczytać nazw ani statystyk.",
+  "countries": {
+    "DE": { "labelPl": "Niemcy", "labelEn": "Germany", "branches": 0 },
+    "LT": { "labelPl": "Litwa", "labelEn": "Lithuania", "branches": 0 },
+    "BY": { "labelPl": "Białoruś", "labelEn": "Belarus", "branches": 0 },
+    "UA": { "labelPl": "Ukraina", "labelEn": "Ukraine", "branches": 0 },
+    "CZ": { "labelPl": "Czechy", "labelEn": "Czechia", "branches": 0 },
+    "SK": { "labelPl": "Słowacja", "labelEn": "Slovakia", "branches": 0 },
+    "AT": { "labelPl": "Austria", "labelEn": "Austria", "branches": 0 },
+    "HU": { "labelPl": "Węgry", "labelEn": "Hungary", "branches": 0 },
+    "PL": { "labelPl": "Polska", "labelEn": "Poland", "branches": 1 }
+  }
+}
