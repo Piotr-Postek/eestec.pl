@@ -5,7 +5,12 @@
   --bg: #0c0f14;
   --text: #f4f6f9;
   --muted: rgba(244, 246, 249, 0.78);
-  --accent: #5b8cff;
+  /* BPP */
+  --accent: #e52a30;
+  --accent-ring: rgba(229, 42, 48, 0.25);
+  --accent-glow: rgba(229, 42, 48, 0.55);
+  --accent-faint-border: rgba(229, 42, 48, 0.35);
+  --accent-faint-bg: rgba(229, 42, 48, 0.15);
 }
 
 @theme inline {

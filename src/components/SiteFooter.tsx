@@ -22,7 +22,7 @@ export function SiteFooter({ label, copyright, social }: Props) {
         <ul className="m-0 flex list-none flex-wrap justify-center gap-3 p-0">
           <li>
             <a
-              className="grid size-12 place-items-center rounded-full border border-white/[0.08] bg-white/[0.06] text-[var(--muted)] transition-[color,background,border-color,transform] hover:border-[rgba(91,140,255,0.35)] hover:bg-[rgba(91,140,255,0.15)] hover:text-[var(--text)] active:scale-[0.96]"
+              className="grid size-12 place-items-center rounded-full border border-white/[0.08] bg-white/[0.06] text-[var(--muted)] transition-[color,background,border-color,transform] hover:border-[var(--accent-faint-border)] hover:bg-[var(--accent-faint-bg)] hover:text-[var(--text)] active:scale-[0.96]"
               href={social.instagram}
               target="_blank"
               rel="noopener noreferrer"
@@ -43,7 +43,7 @@ export function SiteFooter({ label, copyright, social }: Props) {
           </li>
           <li>
             <a
-              className="grid size-12 place-items-center rounded-full border border-white/[0.08] bg-white/[0.06] text-[var(--muted)] transition-[color,background,border-color,transform] hover:border-[rgba(91,140,255,0.35)] hover:bg-[rgba(91,140,255,0.15)] hover:text-[var(--text)] active:scale-[0.96]"
+              className="grid size-12 place-items-center rounded-full border border-white/[0.08] bg-white/[0.06] text-[var(--muted)] transition-[color,background,border-color,transform] hover:border-[var(--accent-faint-border)] hover:bg-[var(--accent-faint-bg)] hover:text-[var(--text)] active:scale-[0.96]"
               href={social.facebook}
               target="_blank"
               rel="noopener noreferrer"
@@ -64,7 +64,7 @@ export function SiteFooter({ label, copyright, social }: Props) {
           </li>
           <li>
             <a
-              className="grid size-12 place-items-center rounded-full border border-white/[0.08] bg-white/[0.06] text-[var(--muted)] transition-[color,background,border-color,transform] hover:border-[rgba(91,140,255,0.35)] hover:bg-[rgba(91,140,255,0.15)] hover:text-[var(--text)] active:scale-[0.96]"
+              className="grid size-12 place-items-center rounded-full border border-white/[0.08] bg-white/[0.06] text-[var(--muted)] transition-[color,background,border-color,transform] hover:border-[var(--accent-faint-border)] hover:bg-[var(--accent-faint-bg)] hover:text-[var(--text)] active:scale-[0.96]"
               href={social.linkedin}
               target="_blank"
               rel="noopener noreferrer"
